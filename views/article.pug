@@ -1,0 +1,11 @@
+include mixins/head
+include mixins/footer
+
++head(article.title)
+
+body
+  p: a(href="/") < Home
+  h1 #{article.title}
+  != article.content
+
+  +footer(user)

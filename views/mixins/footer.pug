@@ -1,0 +1,14 @@
+mixin footer()
+  br
+  br
+  br
+  br
+  hr
+  if user
+    p Welcome, #{user.username} 
+      a(href="/user/signout") (logout)
+    p: a(href="/article/write") Write article
+    
+  else
+    p: a(href="/user/signin") Login
+    p: a(href="/user/signup") Signup

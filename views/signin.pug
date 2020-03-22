@@ -1,0 +1,17 @@
+include mixins/head
+include mixins/footer
+
++head('Login Page')
+
+body
+  p: a(href="/") < Home
+  h1 Login
+  form(action="/user/signin" method="POST")
+    input(type="text" name="username" placeholder="Login")
+    br
+    input(type="password" name="password" placeholder="Password")
+    br
+    input(type="submit" value="Login")
+
+
+  +footer()
